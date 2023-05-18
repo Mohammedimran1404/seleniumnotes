@@ -1,0 +1,68 @@
+Selenium does not support desktopApplications so we have to integrate selenium with Auto IT.
+Installation steps:
+1. Go to Official website to download AutoIT
+site:
+https://www.autoitscript.com/site/autoit/downloads/
+2. click download auto it first option after scroll down
+3. After downloading Auto IT setup exe file, install and just click next next....
+4. After installation go to "c" drive open programfiles x86 and inthat open autoIT folder
+5. To open AutoIT Editor folder open SciTE folder and click on 
+   SciTE application i.e our editor.
+
+
+FileUpload AutoIT script:
+Steps:
+
+1. Shift focus from webapp  to desktop window
+2. set complete file path in Edit text box
+3. click on open
+
+To deal with desktop components we have to write windows Object it is same like webelement
+
+To Identify windows Object go to C drive open Programfiles x86
+click on AutoIT--> open--> Au3info_X64 It is used to find window Object
+
+How to Identify Window Object?
+1. Open Au3info_X64
+2. drag Finder Tool on desktop element and look for title ,class ,intance values
+3. Write Auto IT script in editor
+
+To Shift Focus we have to write ControlFocus("title","","controlId")
+here title u can find  Au3info_X64 and
+controlId is Class+instance
+
+To write filepath  in edit box for  upload file
+ControlSetText("title","","controlId","filepath")
+
+To click on open
+ControlClick("title","","controlID")
+
+ControlID: class+Intance
+
+Sample AutoIT script
+ControlFocus("Open","","Edit1")
+ControlSetText("Open","","Edit1","D:\selniumfiles\seleniumProgramNotes\ExplicitWait.txt")
+ControlClick("Open","","Button1")
+
+save this and right click and compile as X64 it will generate
+.exe application
+
+this .exe application will pass in selenium script
+
+Selenium script:
+System.setProperty("webdriver.chrome.driver", "D:\\selniumfiles\\chromedriver96\\chromedriver.exe");
+	WebDriver driver=new ChromeDriver();
+	driver.get("https://www.adobe.com/acrobat/online/word-to-pdf.html");
+	Thread.sleep(3000);
+	driver.findElement(By.id("lifecycle-nativebutton")).click();
+	Thread.sleep(3000);
+    Runtime.getRuntime().exec("D:\\selniumfiles\\seleniumProgramNotes\\autoItScripts\\FileUpload.exe");  // code is completly java and package is java.lang
+
+
+AutoIT script:
+ControlFocus("Open","","Edit1");
+ControlSetText("Open","","Edit1","D:\selniumfiles\manualnotes\new Manual notes\blackboxtechniques.docx");
+ControlClick("Open","","Button1");
+
+
+

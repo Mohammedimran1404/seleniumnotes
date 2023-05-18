@@ -1,0 +1,77 @@
+Sequential Programming:
+Sequential is step by stepexecution of program
+here each and every line will execute.
+
+1. To solve any problem what information is requried is known as input.
+2. After calculation result is known as output
+
+Problem : find area of rectangle:
+
+To find area of shape rectangle
+input : dimensions i.e length,width
+input type: integer--> int
+
+int length=10; // here int is datatype length is variable name  10 is data
+int width=5; // here int is datatype width is variable name  5 is data
+int area= length*width;//here area is a variable name of int type which will store multiplication value  of length*width
+
+If we want to print only text write inside double quotes
+it means whatever we write in double quotes exactly it will display
+
+to display variable value we should not use double quotes.
+if we write variable in double quotes it will not consider as variable , it will consider as text.
+
+
+to join two strings or string and variables we have to use
+"+" operator here + symbol will not perform addition operation
+it will perform concatenation operation means joining two things
+
+"Hello " + "World"
+
+"Hello " +"Welcome to slenium class"
+"Area of Rectangle "+ area // Area of Rectangle 50
+
+Assignment -1
+1. Find Area of Circle:
+   formula: area = pi*r*r
+
+2. Find Circumference of Circle
+   formula : circum= 2*pi*r
+
+here r is radius
+
+3. find totalmarks and percentage:
+   totalmarks=m1+m2+m3+m4+m5+m6
+   percentage= totalmarks/6
+
+here m1 to m6 are 6 subject marks
+
+4. calculate SimpleIntrest
+   si= p*t*r/100
+
+here p=principle amount  t=time   r=rateof intrest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

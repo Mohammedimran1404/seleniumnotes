@@ -1,0 +1,23 @@
+Advantages of Selenium:
+
+1. Selenium is an Open Source Software.
+2. Selenium supports various programming languages to write programs (Test scripts)
+   example: java,C#,perl,python,Ruby and PHP
+3. Selenium supports various operating systems (MS Windows, Linux, Macintosh etc…)
+4. Selenium supports various Browsers (Mozilla Firefox, Google Chrome, IE, Opera, Safari etc…)
+5. Selenium supports Parallel Test Execution.
+
+Disadvantages of Selenium
+
+1. No reliable Technical Support from anybody. because it is Open Source
+2. It supports Web based applications only.
+3. Difficult to use, takes more time to create Test cases.
+4. Difficult to Setup Test Environment when it compares to Vendor Tools like UFT, RFT, SilkTest etc…
+   Selenium uses various tools and plugins to support Test Automation, we need to configure them manually.
+5. Limited support for Image Testing.
+6. New features may not work properly.
+   Since it is open source software nobody is responsible for new features usage, they may or may not work properly.
+7. No Test Tool integration for Test Management.
+   No Tool available in the Selenium’s Tool suite to support Test Management, we have to choose any tool from the market
+8. No Built-in Reporting facility.
+   Selenium WebDriver doesn’t have built in Result Report facility, we need to take help from either JUnit or TestNG Testing Framework to genrerate Test Reports.

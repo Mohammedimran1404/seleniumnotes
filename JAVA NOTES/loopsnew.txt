@@ -1,0 +1,120 @@
+Loops:
+Why we have to use loops?
+To do same task multiple times we use loops.
+
+How many types of iterative statements or loops?
+a. Range Based Loop
+b. Conditional Based loop
+
+What is Range Based loop and When we have to choose?
+If we know how many times statements has to execute in that case we use Range based loop.
+Under Range Based loop: for loop.
+
+What is Conditional loop?
+When we do not know how many times the loop has to execute
+it completly depends on condition 
+In that case we use Conditional based loop.
+
+Types of Conditional based loop:
+
+1. Entry control loop: while loop
+2. Exit control loop: Do While loop
+
+Note: for,while, do while is used for same purpose.
+
+Three statements are must inside any loop.
+   a. Initialization (starting point)
+   b. Condition      (Range)
+   c. updation *** It can be increment/decrement/addition/subtraction/multiplication/division or any manipulation we can do only one condition that it has to break loop condition at certain point other wise loop can go infinte times.
+
+About While Loop:
+
+1. How to write while loop?
+     syntax: Grammer
+            initialization;
+            while(condition)
+            {
+                logic;
+                updation;
+            }
+
+2. How control will flow inside while loop?
+    first control go to initiazation 
+    second check condition : if condition is true then control move to inside while body 
+    Third updation
+ ****after updation control go and check condition and Process iterate till condition is false
+Once condition is false control come out of while loop.
+3. Do's Dont's of while loop:
+    a. initialization is must
+    b. while is a keyword it should written in lower case follow with round braces
+         example while() valid one
+                 While()  invalid one ---> undefined method
+   c. inside round braces of while must write condition or any expression which results only boolean type of data
+                  while(true) valid always loop execute never stop.
+while(false) -->compile time error ---> unreachable code
+
+while(2+3) --> compiletime cannot convert int to boolean (Type mismatch)
+while(2+3>a) --> valid
+
+d. after while should write semicolon.
+     If we write semicolon there  are two types of behaviour:
+             if while condition is true--->then loop will never ends no output on console , will not get terminated msg on console.(control iterates in same line)
+                        int a=1, b=5;
+                         while(a<b);
+                          {
+                                syso(a);
+                                 a++;
+                         }
+      
+             if while condition is false --> then will get output , no errors while below body part will execute one time
+                        int a=1, b=5;
+                         while(a>b);
+                          {
+                                syso(a);
+                                 a++;
+                         }
+                            1 stop
+               
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

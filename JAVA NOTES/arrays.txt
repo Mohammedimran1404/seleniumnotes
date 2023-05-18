@@ -1,0 +1,233 @@
+1. What is limitation of Variable?
+Variable can store only one value at a time.
+If we want to store more than one value compiler will not accept and generate compile time error. i.e Type Mismatch cannot convert int[] to int.
+
+Example:
+
+package arrays;
+
+public class Array1 {
+public static void main(String[] args) {
+	int a= 10,20,30,40,50;//Type mismatch: cannot convert from int[] to int
+}
+}
+
+2. What is Array?
+Array is group values .
+
+3. How compiler will understand it is array or variable?
+Araryname  follow with[],  int a[]
+variable will not follow with any []--> int a
+
+4. How values are stored in array?
+     Values are stored at contigous memory location(side by side)
+     each location is having index value.
+                            starts with zero
+                            and lastindex is length-1
+
+   a.  What is index?
+            index means position of value in array
+    b. What is length?
+             length means no.of elements
+   c.  How do we find length of array?
+        In java we have predefined function called "length" which return no.of values in array.
+Syntax:
+  int  len=arrayname.length;
+  here len store no.of values i.e count
+
+5. How to declare array?
+   syntax:
+   datatype arrayname[]
+    int a[]
+    char a[]
+    String a[]
+
+6. How to initialize array?
+   syntax
+         {value1,value2,value3}
+
+7.Can we declare array in one line and in second line array initialization?
+No
+array declaration and initiazation should be done in one line.
+
+syntax:
+
+datatype arrayname[]={value1,value2,value3,.....};
+int ids[]={101,102,203,304,405};
+String names[]={"Avnesh","Himabindu","divya"};
+char   grades[]={'A','B','A','C'};
+
+
+8. How to get Particular index value in array?
+   syntax:
+         arrayname[indexvalue]-->it will point to index ,we can access the value.
+
+9.*** What if we write index which is not available?
+     means i want to get value at index 5
+     Example:
+package arrays;
+
+public class Array1 {
+public static void main(String[] args) {
+	int a[]= {10,20,30,40,50};
+	       int length=a.length;
+	       System.out.println("No.of elements : "+length);
+	       int x=a[5];
+	       System.out.println(x);
+	       
+	       
+}
+}
+output:
+No.of elements : 5
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 5 out of bounds for length 5
+	at arrays.Array1.main(Array1.java:8)
+
+*** if we are trying to get a value from index which is not there then we will face Run Time issue , because JVM cannot find index.
+
+10. How to Print or display all values of array?
+       By using loops concept will print all array values.
+      
+Example: with for loop
+
+package arrays;
+
+public class Array1 {
+public static void main(String[] args) {
+	int a[]= {10,20,30,40,50};
+	       int length=a.length;
+	       System.out.println("No.of elements : "+length);
+	    /*   int x=a[5];
+	       System.out.println(x);*/
+	       System.out.println("Array values By using for loop : ");
+	       for(int i=0;i<a.length;i++)
+	       {
+	    	   System.out.println(a[i]);
+	       }
+	       
+	       
+}
+}
+
+output:
+No.of elements : 5
+Array values By using for loop : 
+10
+20
+30
+40
+50
+
+Example: For each loop
+
+For each loop is enhanced for loop.
+
+Inthis for each loop we do not need provide initialization,condition,updation
+
+This for each loop will use only in arrays and collections not in normal logical programs.
+
+Syntax of for each loop:
+
+for(arraydatatype variablename : arrayname )
+{
+variablename//it holds each value of array at a time
+}
+
+example:
+package arrays;
+
+public class Array1 {
+public static void main(String[] args) {
+	int a[]= {10,20,30,40,50};
+	       int length=a.length;
+	       System.out.println("No.of elements : "+length);       
+	       System.out.println("Array values By using for each loop");
+	       for(int x : a )
+	       {
+	      System.out.println(x);
+	       }       
+}
+}
+
+11. Can we store in array different type of data?
+No , In array we can store only similar type of data
+Means : if array is int type then we have to store only integers
+        if array is char type then we have to store only characters
+therefore: Array is homogenous not heterogenous
+
+Then how to over come this limitation , In java We have collection framework.
+
+Conlusion:
+array is group of values store at contiogous memory location of similar type of data.
+
+
+12. Can size changed dynamically?
+
+(Dynamic means while running program if u want to change size of array , increase/decrease)
+
+No.
+
+When we Run the array program , We scan array size Let say size=10 means we store 10 values in array.
+Size is 10 now, User enter 3 values in array and now user has to enter 7 values
+but user do not want to enter 7 values user want to fix size to 3
+that is not possible in java , array size is fixed we cannot increase nor reduce size of array dynamically means while running the Program.
+
+
+13. Limitation of array?
+  1. array is homogenous
+  2. array size fixed
+
+14. How to scan array values using scanner class?
+     a. fix the size i.e allocate memory for arary
+         create object for array
+     b. scan values and store inside index 
+15. How to create Object for array?
+   syntaxfor class :
+      classname objectname = new classname();
+  syntax for array:
+      datatype arrayname[] =  new  datatype[size];
+       int       a[]  =new int[10];
+       char      a[]  =new char[12];
+       String names[]=new String[2];
+16. How to scan values?
+    If we want to scan one value:
+             a[0]=scan.nextInt();
+   here we are reading or scanning more than one value so we have to use loops concept
+            for(int i=0;i<a.length;i++)
+                        a[i]=scan.nextInt();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

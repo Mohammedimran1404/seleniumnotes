@@ -1,0 +1,74 @@
+/*
+ 
+ Syntax:
+ initialization;
+ while(condition)
+ {
+ logic;
+ updation;
+ }
+ */
+/*
+ 1. if while condition is true then control will go inside while and execute the logic
+    and updation and process repeate till condition false
+ 2. control will go to condition after updation ,control will not go to  initialization during repeatation.
+ 
+ 3. What happen if we do not initialize the variable?
+     if we only declare and do not intialize no compiletime error in that line but
+      we can see compile time error in the expressions or conditions or where ever we use that variable
+      
+      error msg: The local variable n may not have been initialized
+      **Note: A variable can declare without initialization but cannot use without initialization
+
+ 4. while()--> it will accept only boolean type of data and expression
+     inside while if we write directly true then loop will execute infinite times
+     inside while if we write directly false then compile time error will be raised because control will not reach to while body.
+ error msg:  Unreachable code
+
+ 5. Can i write semicolon after while condition?
+    yes we can write semicolon no compile time no run time error but  below part 
+    i.e body of while does not come under while condition 
+    because while terminates in same line
+    Two types of output:
+  a.   program will not terminate if while condition is true (it will itirate in it self only)
+  b.   program will terminate if while condition is false 
+    and because of semicolon while control finished in the sameline 
+    and below part comes under normal program
+    
+  6. What happen if we do not write updation?
+  no compile time error but program will go infinite times if condition is true
+  otherwise terminate
+  
+  7. What happen if we write updation as decrement but according the program it needs increment?
+       no compile time error but program will not terminate go infnite times.
+       
+       giving updation is not important giving correct updation which breaks condition at certain point is must.
+       
+ */
+/*
+ initialization;
+ do
+ {
+ logic;
+ updation;
+ }
+ while(condition);
+
+ */
+/*
+ If condition is true or false in dowhile
+ loop will execute atleast once;
+
+/*         1               2        4
+	for(initialization;condition;updation)
+	{
+	logic;  3	
+	}
+
+
+	
+	*/
+** In for loop if we write semicolon then no compiletime error and no runtime error
+  and loop will also terminate if updation and condition is properly written
+   and below part does not comes under for loop
+

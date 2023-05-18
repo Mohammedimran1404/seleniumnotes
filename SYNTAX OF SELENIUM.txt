@@ -1,0 +1,67 @@
+ 1. EXPLICIT WAIT
+WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+wait.until(ExpectedConditions.alertIsPresent());
+
+ 2. IMPLICIT WAIT
+ driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(6)); 
+
+ 3. DRAG AND DROP
+Actions action = new Actions(driver);
+action.dargAndDROP(source,destination).build().perform();
+
+ 4.MOUSEHOVER
+Actions action = new Actions(driver);
+		action.moveToElement(accountsAndList).build().perform();
+
+ 5. RIGHTCLICK
+ Actions action = new Actions(driver);
+		action.contextClick(todaysDeal).build().perform();
+
+ 6. FRAMES
+  driver.switchTo().frame(0); // TO ENTER IN FRAME
+  driver.switchTo().defaultContent(); // TO EXIT FROM THE FRAME
+
+ 7.ALERT
+ Alert alert = driver.SwitchTo().alert();
+alert.accept(); 
+alert.dismiss();
+alert.sendkeys("imran");
+
+ 8. MAXMIZE AND MINIMIZE THE WINDOW
+  driver.manage().window().maximize();                                               
+  driver.manage().window().minimize();
+
+ 9. DROPDOWN
+Select sele = new Select(dropdown);
+ List<WebElement> alloptions = sele.getOptions(); 
+ for(WebElement opt: alloptions) { 
+ System.out.println(opt.getText());
+ sele.selectByIndex(4);
+ sele.selectByValue("search-alias=furniture");
+ sele.selectByVisibleText("Appliances");
+
+10. SCREEN SHOT
+ TakesScreenshot ts = (TakesScreenshot)driver;
+	File f=ts.getScreenshotAs(OutputType.FILE);
+	FileUtils.copyFile(f, new File(".//screenshots//"+imagename+".png"));
+}
+	}
+	ScreenShot.takescreenshot(driver, "img1");// to take screenshot we have created another class calling
+
+11. SCROLL
+ JavascriptExecutor js = (JavascriptExecutor) driver; // to scroll
+		js.executeScript("arguments[0].scrollIntoView(true)", example);
+
+12.ROBOT CLASS
+Robot robo  = new Robot();
+		robo.keyPress(KeyEvent.VK_DOWN);
+		robo.keyRelease(KeyEvent.VK_DOWN);
+		
+		robo.keyPress(KeyEvent.VK_ENTER);
+		robo.keyRelease(KeyEvent.VK_ENTER);
+		
+
+
+		 
+
+
